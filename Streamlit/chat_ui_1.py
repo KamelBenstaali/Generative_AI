@@ -90,17 +90,17 @@ def load_split_each_file():
         loader = PyPDFLoader(pdf_file)
         doc_file = loader.load()
         doc_file_split = text_splitter.split_documents(doc_file)
-        doc_db = Pinecone.from_documents(doc_file_split, embeddings, index_name='kameltrainvectors', namespace='pdf')
+        doc_db = Pinecone.from_documents(doc_file_split, embeddings, index_name='kameltrain', namespace='pdf')
     for csv_file in csv_files:
         loader = CSVLoader(file_path=csv_file)
         doc_file = loader.load()
         doc_file_split = text_splitter.split_documents(doc_file)
-        doc_db = Pinecone.from_documents(doc_file_split, embeddings, index_name='kameltrainvectors', namespace='csv')
+        doc_db = Pinecone.from_documents(doc_file_split, embeddings, index_name='kameltrain', namespace='csv')
     for xlsx_file in xlsx_files:
         loader = UnstructuredExcelLoader(xlsx_file)
         doc_file = loader.load()
         doc_file_split = text_splitter.split_documents(doc_file)
-        doc_db = Pinecone.from_documents(doc_file_split, embeddings, index_name='kameltrainvectors', namespace='excel')
+        doc_db = Pinecone.from_documents(doc_file_split, embeddings, index_name='kameltrain', namespace='excel')
     return doc_db
 
 #Initializing the llm model
@@ -134,7 +134,7 @@ def main():
         st.session_state.conversation_history = []
 
     # Load existing conversation history from file if available
-    conversation_file_path = "conversation_history.txt"
+    conversation_file_path = "conversation_history_pdf.txt"
     try:
         with open(conversation_file_path, "r") as file:
             st.session_state.conversation_history = file.readlines()

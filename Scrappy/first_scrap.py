@@ -36,6 +36,8 @@ def get_all_href_links(url):
 # href_links = get_all_href_links(url)
 # print("Liens href trouvés sur la page :", href_links)
 
-loader = WebBaseLoader("https://webscraper.io/test-sites/e-commerce/allinone")
+
+
+loader = WebBaseLoader("https://sites.google.com/banquealimentaire.org/ticadi/accueil")
 docs = loader.load()
 print(docs[0].page_content[:500])

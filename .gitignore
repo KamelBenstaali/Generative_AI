@@ -1,5 +1,7 @@
 .idea/
 .env/
+Audio_ai/data
+Audio_ai/.env
 Langchain/.ipynb_checkpoints/
 Langchain/data
 Langchain/dataone
@@ -10,6 +12,9 @@ Langchain_data_preprocessing/Apprendre_le_ML_en_une_semaine.pdf
 Pinecone/.ipynb_checkpoints
 Pinecone/data
 Pinecone/.env
+Scrappy/page.html
+Scrappy/page_source.html
 Streamlit/data
 Streamlit/.env
-Streamlit/conversation_history.txt
+Streamlit/conversation_history_pdf.txt
+Streamlit/conversation_history_excel.txt

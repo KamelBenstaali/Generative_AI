@@ -34,7 +34,7 @@ def process_files(files, loader_class, text_splitter, embeddings, index_name, na
         Pinecone.from_documents(doc_file_split, embeddings, index_name=index_name, namespace=namespace)
 
 @st.cache_resource
-def load_split_each_file(index_name='portailassociations'):
+def load_split_each_file(index_name='kameltrainvectors'):
 
     text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=20)
     embeddings = OpenAIEmbeddings(model='text-embedding-3-small', dimensions=1536)

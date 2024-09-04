@@ -1,0 +1,18 @@
+user: c'est quoi ticadi ?
+bot: Chatbot: TICADI est un système utilisé pour gérer et analyser les données liées à la distribution d'aide alimentaire. Il permet de générer des rapports statistiques sur l'activité de distribution, les bénéficiaires, et les stocks, à usage interne et pour répondre aux demandes d'indicateurs de la part de l'État. Le système offre des fonctionnalités pour imprimer, télécharger, et exporter les rapports, ainsi que des outils pour vérifier la cohérence des données avant leur validation et transmission à la base de données interne des Banques Alimentaires (AMS).
+user: c'est quoi proxidon ?
+bot: Chatbot: ProxiDon est une application liée à la Banque Alimentaire qui facilite la gestion des dons alimentaires. Elle permet aux associations de s'inscrire pour recevoir des produits alimentaires donnés par divers donateurs. L'application inclut des fonctionnalités pour gérer les paniers de dons, les inscriptions et les pré-inscriptions des associations, ainsi que la communication par email entre les différents acteurs impliqués (associations, donateurs, et référents ProxiDon).
+user: c'est quoi vif ?
+bot: Chatbot: VIF est un système informatique utilisé par la Fédération des Banques Alimentaires pour la gestion de la distribution de l'aide alimentaire. Il permet de gérer divers aspects tels que les flux de stocks (entrées, préparations, sorties), la traçabilité des produits, la gestion des inventaires, et l'édition de documents comme les bons de réception et de livraison. Le terme VIF n'est pas défini explicitement dans le document, mais il est clair qu'il s'agit d'une plateforme centrale pour les opérations administratives et logistiques des Banques Alimentaires.
+user: résume moi le contenu du tableau excel
+bot: Chatbot: Le tableau Excel contient des données sur diverses Banques Alimentaires (B.A.) en France pour les années 2022 et 2023. Les informations incluent :
+
+1. **Identifiants et noms des Banques Alimentaires (B.A.)** : Chaque B.A. est identifiée par un code postal et un nom.
+2. **Nombre d'associations actives** : Le nombre d'associations partenaires actives pour chaque B.A. en 2022 et 2023.
+3. **Volume VIF en kg net** : Le volume de Vivres Indispensables (VIF) distribué en kilogrammes nets pour chaque B.A. en 2022 et 2023.
+4. **Nombre d'associations avec bénéficiaires à 0** : Le nombre d'associations ayant zéro bénéficiaire pour chaque B.A. en 2022 et 2023.
+5. **Nombre de bénéficiaires déclarés par B.A.** : Le nombre de bénéficiaires déclarés pour chaque B.A. en 2022 et 2023.
+6. **Nombre de passages déclarés par B.A.** : Le nombre de passages (visites ou utilisations des services) déclarés pour chaque B.A. en 2022 et 2023.
+7. **Évolution des bénéficiaires et des passages** : Les taux d'évolution des bénéficiaires et des passages entre 2022 et 2023 pour chaque B.A.
+
+Les données montrent des variations dans le nombre d'associations actives, le volume de vivres distribués, le nombre de bénéficiaires et de passages pour chaque B.A. entre les deux années. Les taux d'évolution permettent d'identifier les tendances de croissance ou de diminution dans ces différents aspects.

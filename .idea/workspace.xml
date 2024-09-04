@@ -5,9 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3965400b-f932-4aad-b3a6-b4327f73c5ca" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Streamlit/conversation_history_pdf.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Langchain/retrieaval_trainless.py" beforeDir="false" afterPath="$PROJECT_DIR$/Langchain/retrieaval_trainless.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Langchain/load_all.py" beforeDir="false" afterPath="$PROJECT_DIR$/Langchain/load_all.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pinecone/Untitled.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Pinecone/Untitled.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scrappy/first_scrap.py" beforeDir="false" afterPath="$PROJECT_DIR$/Scrappy/first_scrap.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Streamlit/chat_ui_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Streamlit/chat_ui_1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Streamlit/conversation_history.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Streamlit/data/Kamel_motivation.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Streamlit/data/ProxidDon - Spécifications - 2024-04-10 - WorkFlowy.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Streamlit/data/TICADI - Spécifications - 2024-04-10 - WorkFlowy.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Streamlit/data/USConstitution_French.pdf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,13 +51,15 @@
   &quot;keyToString&quot;: {
     &quot;Python.chat_ui_1.executor&quot;: &quot;Run&quot;,
     &quot;Python.first_scrap.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scrap_selenium.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scrap_selenium_2.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/kamel/Documents/Repositories/Generative_AI&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kamel/Documents/Repositories/Generative_AI/Streamlit&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
@@ -56,19 +67,27 @@
     ]
   }
 }</component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="Generative_AI" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="Generative_AI" />
+      </console-settings>
+    </option>
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kamel\Documents\Repositories\Generative_AI\Streamlit" />
+      <recent name="C:\Users\kamel\Documents\Repositories\Generative_AI\Langchain" />
       <recent name="C:\Users\kamel\Documents\Repositories\Generative_AI\Pinecone" />
       <recent name="C:\Users\kamel\Documents\Repositories\Generative_AI\Streamlit\data" />
       <recent name="C:\Users\kamel\Documents\Repositories\Generative_AI\Langchain\dataone" />
-      <recent name="C:\Users\kamel\Documents\Repositories\Generative_AI\Streamlit" />
-      <recent name="C:\Users\kamel\Documents\Repositories\Generative_AI\Langchain" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kamel\Documents\Repositories\Generative_AI\Langchain\data" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.scrap_selenium_2">
     <configuration name="chat_ui_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Generative_AI" />
       <option name="ENV_FILES" value="" />
@@ -91,8 +110,77 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="first_scrap" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Generative_AI" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scrappy" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scrappy/first_scrap.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="scrap_selenium" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Generative_AI" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scrappy" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scrappy/scrap_selenium.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="scrap_selenium_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Generative_AI" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scrappy" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scrappy/scrap_selenium_2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.scrap_selenium_2" />
+        <item itemvalue="Python.scrap_selenium" />
+        <item itemvalue="Python.first_scrap" />
         <item itemvalue="Python.chat_ui_1" />
       </list>
     </recent_temporary>
