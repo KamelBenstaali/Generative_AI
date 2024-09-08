@@ -1,5 +1,6 @@
 .idea/
 .env/
+venv/
 Audio_ai/data
 Audio_ai/.env
 Langchain/.ipynb_checkpoints/
