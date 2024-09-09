@@ -31,7 +31,7 @@ def retrieval_answer(query):
 
 def chatbot_response(input_text):
     # Simple echo response for demonstration purposes
-    return "BABot: " + input_text
+    return input_text
 
 # Define the Streamlit app
 def main():
@@ -52,11 +52,13 @@ def main():
     # Display conversation history
     for item in st.session_state.conversation_history:
         if "user" in item:
-            item_display = item.replace("user: ","")
-            st.info(item_display)
+            item_display_identified = item.replace("user: ","")
+            item_display_formatted = item_display_identified.replace(":newligne:", "\n")
+            st.info(item_display_formatted)
         elif "BABot" in item:
-            item_answer_display = item.replace("BABot:", "")
-            st.success(item_answer_display)
+            item_answer_display_identified = item.replace("BABot:", "")
+            item_answer_display_formatted = item_answer_display_identified.replace(":newligne:", "\n")
+            st.success(item_answer_display_formatted)
 
     # User input box
     user_input = st.chat_input("Posez votre question")
@@ -66,6 +68,10 @@ def main():
         # Get chatbot response
         bot_response = chatbot_response(retrieval_answer(user_input))
 
+        #formatting the messages to be added to the history
+        user_input = user_input.replace("\n", ":newligne:")
+        bot_response = bot_response.replace("\n", ":newligne:")
+
         # Add user's message to the conversation history
         st.session_state.conversation_history.append("user: " + user_input)
 
@@ -73,8 +79,8 @@ def main():
         st.session_state.conversation_history.append(bot_response)
 
         # Display the latest user input and chatbot response above the input field
-        st.info(user_input)
-        st.success(bot_response)
+        st.info(user_input.replace(":newligne:", "\n"))
+        st.success(bot_response.replace(":newligne:", "\n"))
 
         # Update conversation history file
         with open(conversation_file_path, "a") as file:
@@ -84,7 +90,6 @@ def main():
 # Run the Streamlit app
 if __name__ == "__main__":
     main()
-
 
 
 
