@@ -25,6 +25,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -38,21 +41,26 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.Qst_audio_by_LLM.executor": "Run",
+    "Python.audio_from_microphone.executor": "Run",
     "Python.chat_ui_1.executor": "Run",
     "Python.first_scrap.executor": "Run",
     "Python.scrap_selenium.executor": "Run",
     "Python.scrap_selenium_2.executor": "Run",
+    "Python.scribe_assembly_2.executor": "Run",
+    "Python.scribe_assembly_3.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/kamel/Documents/Repo/Generative_AI",
+    "last_opened_file_path": "C:/Users/kamel/Documents/Repo/Generative_AI/Audio_ai/data",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "aDefault",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "vue.rearranger.settings.migration": "true"
   },
@@ -72,18 +80,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\kamel\Documents\Repositories\Generative_AI\Streamlit" />
-      <recent name="C:\Users\kamel\Documents\Repositories\Generative_AI\Langchain" />
-      <recent name="C:\Users\kamel\Documents\Repositories\Generative_AI\Pinecone" />
-      <recent name="C:\Users\kamel\Documents\Repositories\Generative_AI\Streamlit\data" />
-      <recent name="C:\Users\kamel\Documents\Repositories\Generative_AI\Langchain\dataone" />
+      <recent name="C:\Users\kamel\Documents\Repo\Generative_AI\Audio_ai\data" />
+      <recent name="C:\Users\kamel\Documents\Repo\Generative_AI\Streamlit" />
+      <recent name="C:\Users\kamel\Documents\Repo\Generative_AI\Pinecone" />
+      <recent name="C:\Users\kamel\Documents\Repo\Generative_AI\Langchain_data_preprocessing" />
+      <recent name="C:\Users\kamel\Documents\Repo\Generative_AI\Langchain\dataone" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\kamel\Documents\Repositories\Generative_AI\Langchain\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.scrap_selenium_2">
-    <configuration name="chat_ui_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.scribe_assembly_3">
+    <configuration name="Qst_audio_by_LLM" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Generative_AI" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -92,12 +100,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Streamlit" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Audio_ai" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Streamlit/chat_ui_1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Audio_ai/Qst_audio_by_LLM.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -106,7 +114,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="first_scrap" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="audio_from_microphone" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Generative_AI" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -115,35 +123,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scrappy" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Audio_ai" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scrappy/first_scrap.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="scrap_selenium" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Generative_AI" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Scrappy" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scrappy/scrap_selenium.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Audio_ai/audio_from_microphone.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -175,12 +160,59 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="scribe_assembly_2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Generative_AI" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Audio_ai" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Audio_ai/scribe_assembly_2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="scribe_assembly_3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Generative_AI" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Audio_ai" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Audio_ai/scribe_assembly_3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.scribe_assembly_3" />
+        <item itemvalue="Python.Qst_audio_by_LLM" />
+        <item itemvalue="Python.audio_from_microphone" />
+        <item itemvalue="Python.scribe_assembly_2" />
         <item itemvalue="Python.scrap_selenium_2" />
-        <item itemvalue="Python.scrap_selenium" />
-        <item itemvalue="Python.first_scrap" />
-        <item itemvalue="Python.chat_ui_1" />
       </list>
     </recent_temporary>
   </component>
@@ -200,7 +232,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1714048500109</updated>
-      <workItem from="1725823882834" duration="2551000" />
+      <workItem from="1725823882834" duration="3057000" />
+      <workItem from="1725867806142" duration="1157000" />
+      <workItem from="1725892082747" duration="11977000" />
     </task>
     <servers />
   </component>
@@ -209,5 +243,11 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Generative_AI$audio_from_microphone.coverage" NAME="audio_from_microphone Coverage Results" MODIFIED="1725908739589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Audio_ai" />
+    <SUITE FILE_PATH="coverage/Generative_AI$scribe_assembly_2.coverage" NAME="scribe_assembly_2 Coverage Results" MODIFIED="1725908206943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Audio_ai" />
+    <SUITE FILE_PATH="coverage/Generative_AI$Qst_audio_by_LLM.coverage" NAME="Qst_audio_by_LLM Coverage Results" MODIFIED="1725909396301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Audio_ai" />
+    <SUITE FILE_PATH="coverage/Generative_AI$scribe_assembly_3.coverage" NAME="scribe_assembly_3 Coverage Results" MODIFIED="1725908130692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Audio_ai" />
   </component>
 </project>
