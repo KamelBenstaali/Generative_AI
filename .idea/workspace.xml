@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="3965400b-f932-4aad-b3a6-b4327f73c5ca" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Audio_ai/scribe_assembly_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Audio_ai/scribe_assembly_2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Audio_ai/scribe_assembly_3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Audio_ai/scribe_assembly_3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pinecone/Untitled.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Pinecone/Untitled.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Streamlit/chat_ui_trainless_excel.py" beforeDir="false" afterPath="$PROJECT_DIR$/Streamlit/chat_ui_trainless_excel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Streamlit/chat_ui_trainless_pdf_upload.py" beforeDir="false" afterPath="$PROJECT_DIR$/Streamlit/chat_ui_trainless_pdf_upload.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Streamlit/conversation_history_pdf.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Streamlit/conversation_history_pdf.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,37 +45,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.Qst_audio_by_LLM.executor": "Run",
-    "Python.audio_from_microphone.executor": "Run",
-    "Python.chat_ui_1.executor": "Run",
-    "Python.first_scrap.executor": "Run",
-    "Python.scrap_selenium.executor": "Run",
-    "Python.scrap_selenium_2.executor": "Run",
-    "Python.scribe_assembly_2.executor": "Run",
-    "Python.scribe_assembly_3.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/kamel/Documents/Repo/Generative_AI/Audio_ai/data",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "aDefault",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Qst_audio_by_LLM.executor&quot;: &quot;Run&quot;,
+    &quot;Python.audio_from_microphone.executor&quot;: &quot;Run&quot;,
+    &quot;Python.chat_ui_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.first_scrap.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scrap_selenium.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scrap_selenium_2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scribe_assembly_2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scribe_assembly_3.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kamel/Documents/Repo/Generative_AI/Audio_ai/data&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "GitIgnore"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;GitIgnore&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="Generative_AI" is-module-sdk="true">
@@ -90,7 +96,7 @@
       <recent name="C:\Users\kamel\Documents\Repositories\Generative_AI\Langchain\data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.scribe_assembly_3">
+  <component name="RunManager" selected="Python.scribe_assembly_2">
     <configuration name="Qst_audio_by_LLM" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Generative_AI" />
       <option name="ENV_FILES" value="" />
@@ -208,10 +214,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.scribe_assembly_2" />
         <item itemvalue="Python.scribe_assembly_3" />
         <item itemvalue="Python.Qst_audio_by_LLM" />
         <item itemvalue="Python.audio_from_microphone" />
-        <item itemvalue="Python.scribe_assembly_2" />
         <item itemvalue="Python.scrap_selenium_2" />
       </list>
     </recent_temporary>
@@ -234,7 +240,10 @@
       <updated>1714048500109</updated>
       <workItem from="1725823882834" duration="3057000" />
       <workItem from="1725867806142" duration="1157000" />
-      <workItem from="1725892082747" duration="11977000" />
+      <workItem from="1725892082747" duration="12967000" />
+      <workItem from="1725961064331" duration="511000" />
+      <workItem from="1725968985126" duration="5966000" />
+      <workItem from="1726038582097" duration="6293000" />
     </task>
     <servers />
   </component>
@@ -246,8 +255,8 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Generative_AI$audio_from_microphone.coverage" NAME="audio_from_microphone Coverage Results" MODIFIED="1725908739589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Audio_ai" />
-    <SUITE FILE_PATH="coverage/Generative_AI$scribe_assembly_2.coverage" NAME="scribe_assembly_2 Coverage Results" MODIFIED="1725908206943" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Audio_ai" />
+    <SUITE FILE_PATH="coverage/Generative_AI$scribe_assembly_2.coverage" NAME="scribe_assembly_2 Coverage Results" MODIFIED="1725969666617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Audio_ai" />
     <SUITE FILE_PATH="coverage/Generative_AI$Qst_audio_by_LLM.coverage" NAME="Qst_audio_by_LLM Coverage Results" MODIFIED="1725909396301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Audio_ai" />
-    <SUITE FILE_PATH="coverage/Generative_AI$scribe_assembly_3.coverage" NAME="scribe_assembly_3 Coverage Results" MODIFIED="1725908130692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Audio_ai" />
+    <SUITE FILE_PATH="coverage/Generative_AI$scribe_assembly_3.coverage" NAME="scribe_assembly_3 Coverage Results" MODIFIED="1725969470963" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Audio_ai" />
   </component>
 </project>

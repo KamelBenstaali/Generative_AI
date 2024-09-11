@@ -5,6 +5,7 @@ import time
 
 # Load environment variables
 load_dotenv(find_dotenv())
+
 ASSEMBLYAI_API_KEY = os.getenv('ASSEMBLYAI_API_KEY')
 
 # Set up AssemblyAI API key
@@ -12,6 +13,8 @@ aai.settings.api_key = ASSEMBLYAI_API_KEY
 
 # URL of the video or audio file on the web
 FILE_URL = "https://storage.googleapis.com/aai-web-samples/5_common_sports_injuries.mp3"
+# You can also transcribe a local file by passing in a file path
+# FILE_URL = './path/to/file.mp3'
 
 # Set transcription configuration
 config = aai.TranscriptionConfig(

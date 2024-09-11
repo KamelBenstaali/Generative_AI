@@ -1,7 +1,7 @@
 import os
 import tempfile
 
-import pandas as pd
+
 from langchain.vectorstores import Pinecone
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.chains import RetrievalQA
@@ -13,7 +13,6 @@ from langchain_community.document_loaders import TextLoader
 from langchain.document_loaders import PyPDFLoader
 import streamlit as st
 from dotenv import load_dotenv, find_dotenv
-from PyPDF2 import PdfReader
 
 load_dotenv(find_dotenv())
 PINECONE_API_KEY = os.getenv('PINECONE_API_KEY')
@@ -22,7 +21,7 @@ OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
 os.environ['OPENAI_API_KEY'] = OPENAI_API_KEY
 
-llm = ChatOpenAI(model_name='gpt-4', temperature=0.5, max_tokens=1024)
+llm = ChatOpenAI(model_name='gpt-4o', temperature=0.5, max_tokens=1024)
 embeddings = OpenAIEmbeddings(model='text-embedding-3-small', dimensions=1536)
 doc_db = Pinecone.from_documents([], embeddings, index_name='kameltrainvectors')
 
@@ -39,10 +38,8 @@ def train_selected_pdf(file):
     )
     doc_file = loader.load()
     doc_file_split = text_splitter.split_documents(doc_file)
-    updated_index = Pinecone.from_documents(doc_file_split, embeddings, index_name='kameltrainvectors', namespace='synthese')
+    updated_index = Pinecone.from_documents(doc_file_split, embeddings, index_name='kameltrainvectors') #, namespace='synthese'
     return updated_index
-
-
 
 def train_selected_txt(file):
     # Save the uploaded file to a temporary file
@@ -57,7 +54,7 @@ def train_selected_txt(file):
     )
     doc_file = loader.load()
     doc_file_split = text_splitter.split_documents(doc_file)
-    updated_index = Pinecone.from_documents(doc_file_split, embeddings, index_name='kameltrainvectors',namespace='synthese_txt')
+    updated_index = Pinecone.from_documents(doc_file_split, embeddings, index_name='kameltrainvectors') #,namespace='synthese_txt'
     return updated_index
 
 def train_selected_csv(file):
@@ -72,7 +69,7 @@ def train_selected_csv(file):
     )
     doc_file = loader.load()
     doc_file_split = text_splitter.split_documents(doc_file)
-    updated_index = Pinecone.from_documents(doc_file_split, embeddings, index_name='kameltrainvectors', namespace='synthese_sheet')
+    updated_index = Pinecone.from_documents(doc_file_split, embeddings, index_name='kameltrainvectors') #, namespace='synthese_sheet'
     return updated_index
 
 def train_selected_excel(file):
@@ -88,7 +85,7 @@ def train_selected_excel(file):
     loader = UnstructuredExcelLoader(tmp_file_path)
     doc_file = loader.load()
     doc_file_split = text_splitter.split_documents(doc_file)
-    updated_index = Pinecone.from_documents(doc_file_split, embeddings, index_name='kameltrainvectors', namespace='synthese_xlsx')
+    updated_index = Pinecone.from_documents(doc_file_split, embeddings, index_name='kameltrainvectors') #, namespace='synthese_xlsx'
     return updated_index
 
 def retrieval_answer(query):
@@ -103,7 +100,7 @@ def retrieval_answer(query):
 
 def chatbot_response(input_text):
     # Simple echo response for demonstration purposes
-    return "BABot: " + input_text
+    return input_text
 
 # Define the Streamlit app
 def main():
@@ -117,21 +114,14 @@ def main():
         st.session_state.uploaded_file_content = ""
 
     # Load existing conversation history from file if available
-    conversation_file_path = "conversation_history_pdf.txt"
+    conversation_file_path = "conversation_history_uploading.txt"
     try:
         with open(conversation_file_path, "r") as file:
             st.session_state.conversation_history = file.readlines()
     except FileNotFoundError:
         pass
 
-    # Display conversation history
-    for item in st.session_state.conversation_history:
-        if "user" in item:
-            item_display = item.replace("user: ", "")
-            st.info(item_display)
-        elif "BABot" in item:
-            item_answer_display = item.replace("BABot:", "")
-            st.success(item_answer_display)
+
 
     # File uploader
     uploaded_file = st.file_uploader("Upload a PDF, TXT, CSV, or Excel file", type=["pdf", "txt", "csv", "xlsx"])
@@ -148,6 +138,17 @@ def main():
             # print('/n hihi')
         st.success("File uploaded and processed successfully.")
 
+    # Display conversation history
+    for item in st.session_state.conversation_history:
+        if "user" in item:
+            item_display_identified = item.replace("user: ", "")
+            item_display_formatted = item_display_identified.replace(":newligne:", "\n")
+            st.info(item_display_formatted)
+        elif "BABot" in item:
+            item_answer_display_identified = item.replace("BABot:", "")
+            item_answer_display_formatted = item_answer_display_identified.replace(":newligne:", "\n")
+            st.success(item_answer_display_formatted)
+
     # User input box
     user_input = st.chat_input("Posez votre question")
 
@@ -156,6 +157,10 @@ def main():
         # Get chatbot response
         bot_response = chatbot_response(retrieval_answer(user_input))
 
+        # formatting the messages to be added to the history
+        user_input = user_input.replace("\n", ":newligne:")
+        bot_response = bot_response.replace("\n", ":newligne:")
+
         # Add user's message to the conversation history
         st.session_state.conversation_history.append("user: " + user_input)
 
@@ -163,13 +168,14 @@ def main():
         st.session_state.conversation_history.append(bot_response)
 
         # Display the latest user input and chatbot response above the input field
-        st.info(user_input)
-        st.success(bot_response)
+        st.info(user_input.replace(":newligne:", "\n"))
+        st.success(bot_response.replace(":newligne:", "\n"))
 
         # Update conversation history file
         with open(conversation_file_path, "a") as file:
             file.write("user: " + user_input + "\n")
             file.write("BABot: " + bot_response + "\n")
+
 
 # Run the Streamlit app
 if __name__ == "__main__":
