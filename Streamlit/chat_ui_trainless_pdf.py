@@ -1,99 +1,97 @@
 import os
+from dotenv import load_dotenv, find_dotenv
+import streamlit as st
 from langchain.vectorstores import Pinecone
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.chains import RetrievalQA
 from langchain.chat_models import ChatOpenAI
-import streamlit as st
-from dotenv import load_dotenv, find_dotenv
 
-
+# Load environment variables
 load_dotenv(find_dotenv())
 PINECONE_API_KEY = os.getenv('PINECONE_API_KEY')
 PINECONE_ENV = os.getenv('PINECONE_ENV')
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
+if not all([PINECONE_API_KEY, PINECONE_ENV, OPENAI_API_KEY]):
+    raise ValueError("Missing one or more environment variables.")
+
 os.environ['OPENAI_API_KEY'] = OPENAI_API_KEY
 
+# Constants
+CONVERSATION_FILE_PATH = "conversation_history_pdf.txt"
+INDEX_NAME = 'kameltrain'
+NAMESPACE = 'pdf'
+
+# Initialize models
 llm = ChatOpenAI(model_name='gpt-4o', temperature=0.5, max_tokens=1024)
 embeddings = OpenAIEmbeddings(model='text-embedding-3-small', dimensions=1536)
-doc_db = Pinecone.from_documents('', embeddings, index_name = 'kameltrain' , namespace='pdf')
-
+doc_db = Pinecone.from_documents('', embeddings, index_name=INDEX_NAME, namespace=NAMESPACE)
 
 def retrieval_answer(query):
+    """Retrieve answer from the model based on the query."""
     qa = RetrievalQA.from_chain_type(
         llm=llm,
         chain_type='stuff',
         retriever=doc_db.as_retriever(),
     )
-    query = query
-    result = qa.run(query)
-    return result
+    return qa.run(query)
 
 def chatbot_response(input_text):
-    # Simple echo response for demonstration purposes
-    return input_text
+    """Return the chatbot's response."""
+    return input_text  # Placeholder for actual response logic
 
-# Define the Streamlit app
+def load_conversation_history():
+    """Load conversation history from a file."""
+    try:
+        with open(CONVERSATION_FILE_PATH, "r") as file:
+            return file.readlines()
+    except FileNotFoundError:
+        return []
+
+def save_conversation_history(user_input, bot_response):
+    """Save conversation history to a file."""
+    with open(CONVERSATION_FILE_PATH, "a") as file:
+        file.write(f"user: {user_input}\n")
+        file.write(f"BABot: {bot_response}\n")
+
 def main():
+    """Main function to run the Streamlit app."""
     st.title("Bienvenu chez BABot")
 
     # Initialize session state
     if 'conversation_history' not in st.session_state:
-        st.session_state.conversation_history = []
-
-    # Load existing conversation history from file if available
-    conversation_file_path = "conversation_history_pdf.txt"
-    try:
-        with open(conversation_file_path, "r") as file:
-            st.session_state.conversation_history = file.readlines()
-    except FileNotFoundError:
-        pass
+        st.session_state.conversation_history = load_conversation_history()
 
     # Display conversation history
     for item in st.session_state.conversation_history:
+        item_display = item.replace(":newligne:", "\n")
         if "user" in item:
-            item_display_identified = item.replace("user: ","")
-            item_display_formatted = item_display_identified.replace(":newligne:", "\n")
-            st.info(item_display_formatted)
+            st.info(item_display.replace("user: ", ""))
         elif "BABot" in item:
-            item_answer_display_identified = item.replace("BABot:", "")
-            item_answer_display_formatted = item_answer_display_identified.replace(":newligne:", "\n")
-            st.success(item_answer_display_formatted)
+            st.success(item_display.replace("BABot: ", ""))
 
     # User input box
     user_input = st.chat_input("Posez votre question")
 
-    # Check if user input is not empty and Enter key is pressed
+    # Check if user input is not empty
     if user_input:
-        # Get chatbot response
         bot_response = chatbot_response(retrieval_answer(user_input))
 
-        #formatting the messages to be added to the history
-        user_input = user_input.replace("\n", ":newligne:")
-        bot_response = bot_response.replace("\n", ":newligne:")
+        # Format messages for history
+        user_input_formatted = user_input.replace("\n", ":newligne:")
+        bot_response_formatted = bot_response.replace("\n", ":newligne:")
 
-        # Add user's message to the conversation history
-        st.session_state.conversation_history.append("user: " + user_input)
+        # Update conversation history
+        st.session_state.conversation_history.append(f"user: {user_input_formatted}")
+        st.session_state.conversation_history.append(bot_response_formatted)
 
-        # Add chatbot's response to the conversation history
-        st.session_state.conversation_history.append(bot_response)
-
-        # Display the latest user input and chatbot response above the input field
+        # Display latest messages
         st.info(user_input.replace(":newligne:", "\n"))
         st.success(bot_response.replace(":newligne:", "\n"))
 
-        # Update conversation history file
-        with open(conversation_file_path, "a") as file:
-            file.write("user: " + user_input + "\n")
-            file.write("BABot: " + bot_response + "\n")
+        # Save to file
+        save_conversation_history(user_input_formatted, bot_response_formatted)
 
 # Run the Streamlit app
 if __name__ == "__main__":
     main()
-
-
-
-
-
-
-
